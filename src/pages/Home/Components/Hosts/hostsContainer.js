@@ -1,5 +1,5 @@
 import React from 'react'
-import {hostsActions} from "../../../../Actions/hosts.actions";
+import {hostsActions} from "../../../../actions/hosts.actions";
 
 import {connect} from 'react-redux';
 import {HostList} from "./hostList";
@@ -41,20 +41,20 @@ class HostContainer extends React.Component {
     let data = this.props.hosts.result;
     /* TodO: Create UI component to change Page size? */
     return (
-        <div>
-          {!data && <p>Loading...</p>}
-          {data && <HostList data={data.hosts.data}/>}
-          {data && <Paginate
-              total={data.hosts.total}
-              page_size={10}
-              currPage={this.props.hosts.page}
-              pageClick={this.handlePageClick}
-              nextClick={this.handleNextClick}
-              prevClick={this.handlePrevClick}
-          />
-          }
+      <div>
+        {!data && <p>Loading...</p>}
+        {data && <HostList data={data.hosts.data}/>}
+        {data && <Paginate
+          total={data.hosts.total}
+          page_size={10}
+          currPage={this.props.hosts.page}
+          pageClick={this.handlePageClick}
+          nextClick={this.handleNextClick}
+          prevClick={this.handlePrevClick}
+        />
+        }
 
-        </div>
+      </div>
     )
   }
 }

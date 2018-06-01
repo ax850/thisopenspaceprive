@@ -1,24 +1,23 @@
 import {hostConstants} from "../constants/hosts.constants";
-import {hostServices} from "../Services/host.services";
+import {hostServices} from "../services/host.services";
 
 export const hostsActions = {
   getHosts,
 };
 
-
 function getHosts(page) {
   return dispatch => {
-    dispatch(request())
+    dispatch(request());
     hostServices.getHosts(page)
-        .then(
-            hosts => {
-              dispatch(success(hosts, page))
-            },
-            error => {
-              dispatch(failure(error))
-            }
-        )
-  }
+      .then(
+        hosts => {
+          dispatch(success(hosts, page))
+        },
+        error => {
+          dispatch(failure(error))
+        }
+      )
+  };
 
   function request() {
     return {type: hostConstants.GET_REQUEST}

@@ -1,13 +1,12 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {Router, Route} from 'react-router';
 import {history} from "./helpers/history";
 
-import {HomePage} from "./Pages/Home/index";
-
+import {HomePage} from "./pages/Home/index";
 
 
 class App extends Component {
-  
+
 
   render() {
     return (

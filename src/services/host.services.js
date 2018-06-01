@@ -14,10 +14,10 @@ function getHosts(page) {
     return response.json();
   }).then(hosts => {
     return new Promise((resolve, reject) => {
-      if (hosts){
+      if (hosts) {
         return resolve({hosts})
       } else {
-        return reject({msg:'Failed To Get Hosts'})
+        return reject({msg: 'Failed To Get Hosts'})
       }
     });
   });

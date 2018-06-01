@@ -6,7 +6,7 @@ import {HostItem} from "./hostItem";
 
 class HostList extends React.Component {
 
-  renderItems(hosts){
+  renderItems(hosts) {
     return _.map(hosts, (host, index) =>
       <HostItem key={index} {...host} />
     )
@@ -15,9 +15,9 @@ class HostList extends React.Component {
   render() {
     let data = this.props.data
     return (
-        <div className={'container'} style={{'height': '30em', 'overflow': 'auto'}}>
-          {this.renderItems(data)}
-        </div>
+      <div className={'container'} style={{'height': '35em', 'overflow': 'auto'}}>
+        {this.renderItems(data)}
+      </div>
     )
   }
 }
