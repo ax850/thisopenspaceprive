@@ -11,7 +11,7 @@ Using npm
 ## Install
 
 ```
-git clone https://github.com/ax850/thisopenspaceprive.git
+git clone https://github.com/ax850/thisopenspace.git
 
 npm install
 
